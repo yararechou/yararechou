@@ -1,0 +1,217 @@
+# Wake on lan Main PC
+- platform: wake_on_lan
+  mac_address: !secret main_computer_mac
+  host: !secret main_computer_ip
+  name: Main Computer
+
+# 433toMQTT switches through the gateway
+# RF 433 outlets
+# Pulselength: 180
+- platform: mqtt
+  name: livingroom_window_lights
+  state_topic: "home/433toMQTT"
+  command_topic: "home/commands/MQTTto433/PLSL_180/433_1"
+  payload_on: "108"
+  payload_off: "100"
+  optimistic: false
+  retain: true
+
+- platform: mqtt
+  name: livingroom_ball_lights
+  state_topic: "home/433toMQTT"
+  command_topic: "home/commands/MQTTto433/PLSL_180/433_1"
+  payload_on: "109"
+  payload_off: "117"
+  optimistic: false
+  retain: true
+
+- platform: mqtt
+  name: livingroom_charger
+  state_topic: "home/433toMQTT"
+  command_topic: "home/commands/MQTTto433/PLSL_180/433_1"
+  payload_on: "217"
+  payload_off: "209"
+  optimistic: false
+  retain: true
+
+- platform: mqtt
+  name: kitchen_coffee_pot
+  state_topic: "home/433toMQTT"
+  command_topic: "home/commands/MQTTto433/PLSL_180/433_1"
+  payload_on: "200"
+  payload_off: "208"
+  optimistic: false
+  retain: true
+
+- platform: mqtt
+  name: kitchen_ceiling_lights
+  state_topic: "home/433toMQTT"
+  command_topic: "home/commands/MQTTto433/PLSL_180/433_1"
+  payload_on: "218"
+  payload_off: "226"
+  optimistic: false
+  retain: true
+
+- platform: mqtt
+  name: livingroom_music_jar
+  state_topic: "home/433toMQTT"
+  command_topic: "home/commands/MQTTto433/PLSL_180/433_1"
+  payload_on: "126"
+  payload_off: "118"
+  optimistic: false
+  retain: true
+
+# RF 433 TV backlight
+# Pulselength: 396
+- platform: mqtt
+  name: livingroom_tv_led
+  state_topic: "home/433toMQTT"
+  command_topic: "home/commands/MQTTto433/PLSL_400/433_1"
+  payload_on: "13511425"
+  payload_off: "13511425"
+  optimistic: false
+  retain: true
+
+- platform: mqtt
+  name: livingroom_tv_led_mode_plus
+  state_topic: "home/433toMQTT"
+  command_topic: "home/commands/MQTTto433/PLSL_400/433_1"
+  payload_on: "13511429"
+  payload_off: "13511429"
+  optimistic: false
+  retain: true
+
+- platform: mqtt
+  name: livingroom_tv_led_mode_minus
+  state_topic: "home/433toMQTT"
+  command_topic: "home/commands/MQTTto433/PLSL_400/433_1"
+  payload_on: "13511435"
+  payload_off: "13511435"
+  optimistic: false
+  retain: true
+
+- platform: mqtt
+  name: livingroom_tv_led_speed_plus
+  state_topic: "home/433toMQTT"
+  command_topic: "home/commands/MQTTto433/PLSL_400/433_1"
+  payload_on: "13511433"
+  payload_off: "13511433"
+  optimistic: false
+  retain: true
+
+- platform: mqtt
+  name: livingroom_tv_led_speed_minus
+  state_topic: "home/433toMQTT"
+  command_topic: "home/commands/MQTTto433/PLSL_400/433_1"
+  payload_on: "13511431"
+  payload_off: "13511431"
+  optimistic: false
+  retain: true
+
+- platform: mqtt
+  name: livingroom_tv_led_demo
+  state_topic: "home/433toMQTT"
+  command_topic: "home/commands/MQTTto433/PLSL_400/433_1"
+  payload_on: "13511432"
+  payload_off: "13511432"
+  optimistic: false
+  retain: true
+
+- platform: mqtt
+  name: livingroom_tv_led_color_plus
+  state_topic: "home/433toMQTT"
+  command_topic: "home/commands/MQTTto433/PLSL_400/433_1"
+  payload_on: "13511434"
+  payload_off: "13511434"
+  optimistic: false
+  retain: true
+
+- platform: mqtt
+  name: livingroom_tv_led_color_minus
+  state_topic: "home/433toMQTT"
+  command_topic: "home/commands/MQTTto433/PLSL_400/433_1"
+  payload_on: "13511437"
+  payload_off: "13511437"
+  optimistic: false
+  retain: true
+
+- platform: mqtt
+  name: livingroom_tv_led_brightness_plus
+  state_topic: "home/433toMQTT"
+  command_topic: "home/commands/MQTTto433/PLSL_400/433_1"
+  payload_on: "13511436"
+  payload_off: "13511436"
+  optimistic: false
+  retain: true
+
+- platform: mqtt
+  name: livingroom_tv_led_brightness_minus
+  state_topic: "home/433toMQTT"
+  command_topic: "home/commands/MQTTto433/PLSL_400/433_1"
+  payload_on: "13511439"
+  payload_off: "13511439"
+  optimistic: false
+  retain: true
+
+- platform: mqtt
+  name: livingroom_tv_led_white
+  state_topic: "home/433toMQTT"
+  command_topic: "home/commands/MQTTto433/PLSL_400/433_1"
+  payload_on: "13511438"
+  payload_off: "13511438"
+  optimistic: false
+  retain: true
+
+- platform: mqtt
+  name: livingroom_tv_led_red
+  state_topic: "home/433toMQTT"
+  command_topic: "home/commands/MQTTto433/PLSL_400/433_1"
+  payload_on: "13511440"
+  payload_off: "13511440"
+  optimistic: false
+  retain: true
+
+- platform: mqtt
+  name: livingroom_tv_led_green
+  state_topic: "home/433toMQTT"
+  command_topic: "home/commands/MQTTto433/PLSL_400/433_1"
+  payload_on: "13511441"
+  payload_off: "13511441"
+  optimistic: false
+  retain: true
+
+- platform: mqtt
+  name: livingroom_tv_led_blue
+  state_topic: "home/433toMQTT"
+  command_topic: "home/commands/MQTTto433/PLSL_400/433_1"
+  payload_on: "13511442"
+  payload_off: "13511442"
+  optimistic: false
+  retain: true
+
+- platform: mqtt
+  name: livingroom_tv_led_yellow
+  state_topic: "home/433toMQTT"
+  command_topic: "home/commands/MQTTto433/PLSL_400/433_1"
+  payload_on: "13511443"
+  payload_off: "13511443"
+  optimistic: false
+  retain: true
+
+- platform: mqtt
+  name: livingroom_tv_led_teal
+  state_topic: "home/433toMQTT"
+  command_topic: "home/commands/MQTTto433/PLSL_400/433_1"
+  payload_on: "13511444"
+  payload_off: "13511444"
+  optimistic: false
+  retain: true
+
+- platform: mqtt
+  name: livingroom_tv_led_purple
+  state_topic: "home/433toMQTT"
+  command_topic: "home/commands/MQTTto433/PLSL_400/433_1"
+  payload_on: "13511445"
+  payload_off: "13511445"
+  optimistic: false
+  retain: true

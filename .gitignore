@@ -1,0 +1,12 @@
+*.conf
+secrets.yaml
+known_devices.yaml
+home-assistant_v2.db
+emulated_hue_ids.json
+tts
+www
+.HA_VERSION
+.shopping_list.json
+.uuid
+home-assistant.log
+entity_registry.yaml
